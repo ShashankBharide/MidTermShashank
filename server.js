@@ -1,17 +1,12 @@
-// Import necessary modules
 const express = require('express');
 const path = require('path');
-
-// Create an instance of the Express application
 const app = express();
 
 // Serve the index.html file
-app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname, 'index.html'));
-});
+app.use(express.static(path.join(__dirname)));
 
-// Start the server on port 3000 or the port assigned by the environment
+// Start the server on the port provided by Elastic Beanstalk or default to 3000
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
+  console.log(`Server running on port ${port}`);
 });
