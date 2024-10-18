@@ -1,0 +1,11 @@
+{
+  "name": "midterm-server",
+  "version": "1.0.0",
+  "description": "A simple Node.js app to serve an index.html file",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "Your Name",
+  "license": "ISC"
+}
